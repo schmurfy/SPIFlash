@@ -66,8 +66,8 @@ void SPIFlash::select() {
   SPI.setDataMode(SPI_MODE0);
   SPI.setBitOrder(MSBFIRST);
   SPI.setClockDivider(SPI_CLOCK_DIV4); //decided to slow down from DIV2 after SPI stalling in some instances, especially visible on mega1284p when RFM69 and FLASH chip both present
-  SPI.begin();
 #endif
+  SPI.begin();
   digitalWrite(_slaveSelectPin, LOW);
 }
 
